@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>مستر محمد سعيد حجازي | جمهورية انجليزاوي</title>
+<meta name="description" content="مستر محمد سعيد حجازي - معلم لغة انجليزية ومنشئ محتوى تعليمي - جمهورية انجليزاوي">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Tajawal:wght@400;500;700;800&family=Cutive+Mono&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#152238;
+    --navy-deep:#0d1626;
+    --maroon:#7a2430;
+    --gold:#c9a24b;
+    --gold-bright:#e6c976;
+    --paper:#f1e9d8;
+    --paper-dark:#e6dbc3;
+    --ink:#221b12;
+  }
+
+  *{box-sizing:border-box;}
+
+  html{scroll-behavior:smooth;}
+
+  body{
+    margin:0;
+    background:
+      radial-gradient(ellipse at top, #1c2b45 0%, var(--navy-deep) 60%);
+    color:var(--ink);
+    font-family:'Tajawal', sans-serif;
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    padding:32px 16px 60px;
+  }
+
+  /* subtle paper grain */
+  body::before{
+    content:"";
+    position:fixed;
+    inset:0;
+    pointer-events:none;
+    opacity:.5;
+    background-image:
+      repeating-linear-gradient(0deg, rgba(255,255,255,0.015) 0px, rgba(255,255,255,0.015) 1px, transparent 1px, transparent 3px);
+  }
+
+  .document{
+    position:relative;
+    width:100%;
+    max-width:460px;
+    background:
+      linear-gradient(180deg, var(--paper) 0%, var(--paper-dark) 100%);
+    border-radius:14px;
+    box-shadow:
+      0 30px 60px -20px rgba(0,0,0,.6),
+      0 0 0 1px rgba(201,162,75,.3);
+    overflow:hidden;
+    animation:riseIn .8s cubic-bezier(.2,.8,.2,1) both;
+  }
+
+  @keyframes riseIn{
+    from{opacity:0; transform:translateY(18px) scale(.98);}
+    to{opacity:1; transform:translateY(0) scale(1);}
+  }
+
+  @media (prefers-reduced-motion: reduce){
+    .document, .seal, .stamp-mark{ animation:none !important; }
+  }
+
+  /* ===== Cover strip ===== */
+  .cover{
+    background:
+      linear-gradient(135deg, var(--navy) 0%, var(--navy-deep) 100%);
+    padding:22px 20px 16px;
+    text-align:center;
+    position:relative;
+    border-bottom:3px double var(--gold);
+  }
+  .cover::after{
+    content:"";
+    position:absolute;
+    inset:6px;
+    border:1px solid rgba(201,162,75,.35);
+    border-radius:8px;
+    pointer-events:none;
+  }
+  .republic-name{
+    font-family:'Amiri', serif;
+    color:var(--gold-bright);
+    font-size:1.05rem;
+    letter-spacing:1px;
+    margin:0;
+  }
+  .republic-sub{
+    font-family:'Cormorant Garamond', serif;
+    font-style:italic;
+    color:#cbd3e0;
+    font-size:.72rem;
+    letter-spacing:3px;
+    text-transform:uppercase;
+    margin:4px 0 0;
+  }
+
+  /* ===== Seal / photo ===== */
+  .seal-wrap{
+    margin:-38px auto 0;
+    width:132px;
+    height:132px;
+    position:relative;
+    z-index:3;
+  }
+  .seal{
+    width:100%;
+    height:100%;
+    border-radius:50%;
+    padding:5px;
+    background:conic-gradient(from 180deg, var(--gold), #fff3cf, var(--gold) 50%, #a9812f, var(--gold));
+    box-shadow:0 10px 22px rgba(0,0,0,.45);
+    animation:sheen 6s linear infinite;
+  }
+  @keyframes sheen{
+    0%,100%{filter:brightness(1);}
+    50%{filter:brightness(1.08);}
+  }
+  .seal img{
+    width:100%;
+    height:100%;
+    border-radius:50%;
+    object-fit:cover;
+    border:3px solid var(--paper);
+    display:block;
+  }
+  .stamp-mark{
+    position:absolute;
+    bottom:-6px;
+    left:-14px;
+    width:60px;
+    height:60px;
+    border-radius:50%;
+    background:rgba(122,36,48,.92);
+    color:var(--paper);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    font-family:'Amiri', serif;
+    font-size:.62rem;
+    line-height:1.1;
+    border:2px dashed var(--gold-bright);
+    transform:rotate(-14deg);
+    box-shadow:0 6px 14px rgba(0,0,0,.35);
+  }
+
+  /* ===== Name block ===== */
+  .name-block{
+    text-align:center;
+    padding:50px 22px 6px;
+  }
+  .full-name{
+    font-family:'Amiri', serif;
+    font-weight:700;
+    font-size:1.7rem;
+    color:var(--maroon);
+    margin:0;
+  }
+  .role{
+    font-size:.92rem;
+    color:#3d3222;
+    margin:6px 0 0;
+    font-weight:500;
+  }
+  .nickname{
+    display:inline-block;
+    margin-top:10px;
+    padding:4px 16px;
+    border:1px solid var(--gold);
+    border-radius:999px;
+    font-family:'Amiri', serif;
+    font-size:.85rem;
+    color:var(--navy);
+    background:rgba(201,162,75,.12);
+    letter-spacing:.5px;
+  }
+
+  /* ===== Motto plaque ===== */
+  .motto{
+    margin:18px 22px 4px;
+    padding:14px 16px;
+    background:linear-gradient(180deg, #fbf6e9, #f1e6cd);
+    border:1px solid rgba(122,36,48,.25);
+    border-radius:6px;
+    text-align:center;
+    position:relative;
+  }
+  .motto::before, .motto::after{
+    content:"❧";
+    color:var(--maroon);
+    font-size:.85rem;
+    margin:0 6px;
+  }
+  .motto p{
+    margin:0;
+    font-family:'Amiri', serif;
+    font-size:1.02rem;
+    color:var(--navy);
+    font-weight:700;
+  }
+
+  /* ===== Divider ===== */
+  .divider{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    margin:22px 24px 12px;
+    color:var(--gold);
+  }
+  .divider .line{ flex:1; height:1px; background:rgba(122,36,48,.25); }
+  .divider span{
+    font-family:'Cormorant Garamond', serif;
+    font-style:italic;
+    font-size:.72rem;
+    letter-spacing:3px;
+    color:var(--maroon);
+    text-transform:uppercase;
+  }
+
+  /* ===== Entries (stamped links) ===== */
+  .entries{
+    display:flex;
+    flex-direction:column;
+    gap:12px;
+    padding:0 20px 6px;
+  }
+  .entry{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    text-decoration:none;
+    color:var(--ink);
+    background:#faf5e7;
+    border:1px solid rgba(21,34,56,.18);
+    border-radius:8px;
+    padding:12px 14px;
+    position:relative;
+    transition:transform .18s ease, box-shadow .18s ease, border-color .18s ease;
+  }
+  .entry:hover, .entry:focus-visible{
+    transform:translateY(-2px);
+    box-shadow:0 10px 18px -8px rgba(21,34,56,.35);
+    border-color:var(--gold);
+    outline:none;
+  }
+  .entry:active{ transform:translateY(0); }
+
+  .entry-icon{
+    flex:0 0 auto;
+    width:42px;
+    height:42px;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:var(--navy);
+    color:var(--gold-bright);
+    border:2px dashed var(--gold);
+  }
+  .entry-icon svg{ width:20px; height:20px; fill:currentColor; }
+
+  .entry-text{ flex:1; text-align:right; }
+  .entry-title{
+    font-weight:700;
+    font-size:.95rem;
+    color:var(--navy);
+    display:block;
+  }
+  .entry-sub{
+    font-family:'Cutive Mono', monospace;
+    font-size:.7rem;
+    color:#6b5f47;
+    display:block;
+    margin-top:2px;
+    letter-spacing:.5px;
+  }
+
+  .entry-code{
+    font-family:'Cutive Mono', monospace;
+    font-size:.65rem;
+    color:var(--maroon);
+    border:1px solid var(--maroon);
+    border-radius:4px;
+    padding:2px 6px;
+    transform:rotate(-6deg);
+    opacity:.75;
+    white-space:nowrap;
+  }
+
+  /* ===== Footer ===== */
+  .footer{
+    text-align:center;
+    padding:20px 20px 26px;
+  }
+  .footer .stamp-line{
+    font-family:'Cormorant Garamond', serif;
+    font-style:italic;
+    font-size:.78rem;
+    color:#6b5f47;
+    letter-spacing:.5px;
+  }
+  .footer .no{
+    font-family:'Cutive Mono', monospace;
+    font-size:.66rem;
+    color:#9a8c68;
+    margin-top:6px;
+  }
+</style>
+</head>
+<body>
+
+<main class="document" role="main">
+
+  <div class="cover">
+    <p class="republic-name">جمهورية انجليزاوي</p>
+    <p class="republic-sub">Republic of Englishzawy</p>
+  </div>
+
+  <div class="seal-wrap">
+    <div class="seal">
+      <img src="assets/mohamed-saeed.jpg" alt="مستر محمد سعيد حجازي">
+    </div>
+    <div class="stamp-mark">معتمد<br>Certified</div>
+  </div>
+
+  <div class="name-block">
+    <h1 class="full-name">مستر محمد سعيد حجازي</h1>
+    <p class="role">معلم لغة إنجليزية ومنشئ محتوى تعليمي</p>
+    <span class="nickname">رئيس جمهورية انجليزاوي</span>
+  </div>
+
+  <div class="motto">
+    <p>وراء كل طالب عظيم معلم ملهم</p>
+  </div>
+
+  <div class="divider"><div class="line"></div><span>Official Channels</span><div class="line"></div></div>
+
+  <div class="entries">
+
+    <a class="entry" href="https://wa.me/201098991229" target="_blank" rel="noopener">
+      <span class="entry-icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2zm0 18a8 8 0 0 1-4.1-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8 8 0 1 1 12 20zm4.4-5.9c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.5.1-.5.8-.6.9-.2.2-.5.1a6.6 6.6 0 0 1-3.3-2.9c-.2-.4.2-.4.6-1.2.1-.2 0-.4 0-.5s-.5-1.2-.7-1.7-.4-.4-.5-.4h-.5a1 1 0 0 0-.7.3 2.9 2.9 0 0 0-.9 2.2 5.1 5.1 0 0 0 1.1 2.7 11.6 11.6 0 0 0 4.6 4c1.6.7 2.2.6 2.6.6a2.2 2.2 0 0 0 1.5-1.1 1.8 1.8 0 0 0 .1-1.1c-.1-.1-.2-.2-.5-.3z"/></svg>
+      </span>
+      <span class="entry-text">
+        <span class="entry-title">تواصل واتساب مباشر</span>
+        <span class="entry-sub">+20 10 9899 1229</span>
+      </span>
+      <span class="entry-code">TEL</span>
+    </a>
+
+    <a class="entry" href="https://www.facebook.com/share/18paPqSB9n/" target="_blank" rel="noopener">
+      <span class="entry-icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><path d="M13.5 21v-8h2.7l.4-3.1h-3.1V7.9c0-.9.3-1.5 1.6-1.5h1.7V3.6A22 22 0 0 0 14.3 3c-2.4 0-4 1.4-4 4v2.9H7.6V13h2.7v8z"/></svg>
+      </span>
+      <span class="entry-text">
+        <span class="entry-title">صفحة فيسبوك الرسمية</span>
+        <span class="entry-sub">Mohamed Saeed</span>
+      </span>
+      <span class="entry-code">FB</span>
+    </a>
+
+    <a class="entry" href="https://instagram.com/mohamed_saeed_24147" target="_blank" rel="noopener">
+      <span class="entry-icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><path d="M12 2.2c2.7 0 3 0 4.1.06 1.1.05 1.8.22 2.2.36a4.4 4.4 0 0 1 1.6 1 4.4 4.4 0 0 1 1 1.6c.14.4.31 1.1.36 2.2.06 1.2.06 1.5.06 4.1s0 3-.06 4.1c-.05 1.1-.22 1.8-.36 2.2a4.4 4.4 0 0 1-1 1.6 4.4 4.4 0 0 1-1.6 1c-.4.14-1.1.31-2.2.36-1.2.06-1.5.06-4.1.06s-3 0-4.1-.06c-1.1-.05-1.8-.22-2.2-.36a4.4 4.4 0 0 1-1.6-1 4.4 4.4 0 0 1-1-1.6c-.14-.4-.31-1.1-.36-2.2C2.2 15 2.2 14.7 2.2 12s0-3 .06-4.1c.05-1.1.22-1.8.36-2.2a4.4 4.4 0 0 1 1-1.6 4.4 4.4 0 0 1 1.6-1c.4-.14 1.1-.31 2.2-.36C8.1 2.2 8.4 2.2 12 2.2zm0 1.8c-2.6 0-2.9 0-4 .06-.9.04-1.4.18-1.7.3a2.6 2.6 0 0 0-1 .6 2.6 2.6 0 0 0-.6 1c-.12.3-.26.8-.3 1.7-.06 1.1-.06 1.4-.06 4s0 2.9.06 4c.04.9.18 1.4.3 1.7.13.4.3.7.6 1a2.6 2.6 0 0 0 1 .6c.3.12.8.26 1.7.3 1.1.06 1.4.06 4 .06s2.9 0 4-.06c.9-.04 1.4-.18 1.7-.3a2.6 2.6 0 0 0 1-.6 2.6 2.6 0 0 0 .6-1c.12-.3.26-.8.3-1.7.06-1.1.06-1.4.06-4s0-2.9-.06-4c-.04-.9-.18-1.4-.3-1.7a2.6 2.6 0 0 0-.6-1 2.6 2.6 0 0 0-1-.6c-.3-.12-.8-.26-1.7-.3-1.1-.06-1.4-.06-4-.06zm0 3.06a4.94 4.94 0 1 1 0 9.88 4.94 4.94 0 0 1 0-9.88zm0 1.8a3.14 3.14 0 1 0 0 6.28 3.14 3.14 0 0 0 0-6.28zm5.13-1.98a1.16 1.16 0 1 1-2.32 0 1.16 1.16 0 0 1 2.32 0z"/></svg>
+      </span>
+      <span class="entry-text">
+        <span class="entry-title">حساب إنستجرام</span>
+        <span class="entry-sub">@mohamed_saeed_24147</span>
+      </span>
+      <span class="entry-code">IG</span>
+    </a>
+
+  </div>
+
+  <div class="footer">
+    <p class="stamp-line">صادرة عن جمهورية انجليزاوي — تعليم اللغة الإنجليزية</p>
+    <p class="no">FILE No. ENGZW-2026</p>
+  </div>
+
+</main>
+
+</body>
+</html>
